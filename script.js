@@ -1,3 +1,5 @@
+// Source by ChatGPT
+
 const buttonContainer = document.getElementById("button-container");
 
 const chromeImg = "chrome.png";
