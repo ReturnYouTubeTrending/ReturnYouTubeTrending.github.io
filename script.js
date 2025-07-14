@@ -3,7 +3,7 @@ const buttonContainer = document.getElementById("button-container");
 const chromeImg = "chrome.png";
 const firefoxImg = "firefox.png";
 const safariImg = "safari.png";
-const unknownImg = "unknown.png";
+const unknownImg = "github.png";
 
 const chromeURL = "https://chromewebstore.google.com/detail/return-youtube-trending/apcbkpnopnnjaegbhnmcimmnlmmbolai";
 const firefoxURL = "https://addons.mozilla.org/firefox/addon/return-youtube-trending";
