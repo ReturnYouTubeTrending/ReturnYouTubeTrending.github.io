@@ -1,0 +1,258 @@
+  :root {
+    --golden: 1.618;
+  }
+
+  body {
+    margin: 0;
+    padding: 0; /* ← Remove horizontal padding */
+    font-family: system-ui, sans-serif;
+
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+
+  /* Main card */
+  .card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #ffffff;
+    color: #222;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    padding: 24px;
+
+    width: 90%;
+    max-width: 600px;
+    height: 260px;
+    box-sizing: border-box;
+    gap: 32px;
+
+    backdrop-filter: blur(10px);
+  }
+
+  /* App icon */
+  .card-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo {
+    width: 128px;
+    height: 128px;
+    border-radius: 20%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+  }
+
+  /* Text + buttons */
+  .card-right {
+    flex: var(--golden);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .card-right h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .card-right p {
+    font-size: 1.2rem;
+    margin: -6px 0 0 0;
+    color: #444;
+  }
+
+  #subtitle {
+    transition: opacity 1s ease;
+    min-height: 1.5em;
+    opacity: 1;
+    display: block;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: #888;
+  }
+
+  #subtitle.fade-out {
+    opacity: 0;
+  }
+
+  #button-container {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 18px;
+  }
+
+  #button-container img {
+    width: 140px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+
+  .button-wrapper img {
+    transition: transform 120ms ease;
+  }
+
+  .button-wrapper.pressed img {
+    transform: scale(0.95);
+  }
+
+  /* Dark mode overrides */
+  @media (prefers-color-scheme: dark) {
+    .card {
+      background-color: #282828;
+      color: #fff;
+      box-shadow: 0 8px 24px rgba(255, 255, 255, 0.15);
+    }
+
+    .card-right p {
+      color: #ccc;
+    }
+
+    .logo {
+      box-shadow: 0 8px 24px rgba(255, 255, 255, 0.15);
+    }
+  }
+
+  .button-wrapper {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+
+  .button-wrapper img {
+    display: block;
+    width: 140px;
+    height: auto;
+    border-radius: 0;     
+    margin: 0;
+    padding: 0;
+  }
+
+  .cooldown-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.152);
+    pointer-events: none;
+    z-index: 2;
+    transition: width 0.4s ease;
+  }
+
+  .rotated-text {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    transform: rotate(90deg) translateY(-100%);
+    transform-origin: top left;
+    white-space: nowrap;
+    font-size: 12px;
+    color: #190d0d;
+    padding: 10px;
+    z-index: 9999;
+  }
+
+@media (max-width: 600px) {
+  body {
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
+
+  .card {
+    flex-direction: column;
+    align-items: flex-start; 
+    justify-content: center;
+
+    height: auto;
+    padding: 20px;
+    gap: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .card-left {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .card-right {
+    width: 100%;
+    gap: 10px;
+    align-items: flex-start; 
+  }
+
+  .card-right h1 {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+
+  .card-right p,
+  #subtitle {
+    font-size: 0.95rem;
+    text-align: left;
+  }
+
+  #button-container {
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: flex-start;
+  }
+
+  #button-container img,
+  .button-wrapper img {
+    width: 100px;
+  }
+
+  .rotated-text {
+    font-size: 10px;
+    top: 10px;
+    left: 0;
+    transform: rotate(90deg) translateY(-100%);
+    transform-origin: top left;
+    padding: 6px;
+  }
+
+  .rotated-text {
+    position: fixed;
+    top: unset;       
+    bottom: 12px;     
+    left: 0;
+    right: 0;
+    transform: none;
+    transform-origin: unset;
+    text-align: center;
+    white-space: normal;
+    padding: 8px 16px;
+    font-size: 11px;
+    z-index: 9999;
+    Color: #4f4f4f;
+}
+
+}
