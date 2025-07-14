@@ -97,6 +97,7 @@
     gap: 14px;
     flex-wrap: wrap;
     margin-top: 18px;
+    min-height: 30px;
   }
 
   #button-container img {
@@ -105,6 +106,18 @@
     cursor: pointer;
     transition: transform 0.2s ease;
   }
+
+  .button-wrapper {
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+  overflow: hidden;
+  border-radius: 5px;
+  outline: 1px solid #e5e5e5;
+  transition: outline 0.2s ease;
+}
 
   .button-wrapper img {
     transition: transform 120ms ease;
@@ -139,6 +152,7 @@
     line-height: 0;
     overflow: hidden;
     border-radius: 5px;
+    outline: 1px solid #e5e5e5;
   }
 
   .button-wrapper img {
@@ -257,4 +271,11 @@
     Color: #4f4f4f;
 }
 
+}
+
+body {
+  opacity: 0;
+}
+body.visible {
+  opacity: 1;
 }

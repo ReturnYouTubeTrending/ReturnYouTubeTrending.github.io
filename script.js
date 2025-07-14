@@ -1,5 +1,3 @@
-// Source by ChatGPT
-
 const buttonContainer = document.getElementById("button-container");
 
 const chromeImg = "chrome.png";
@@ -44,10 +42,15 @@ function addButton(imgSrc, url) {
   img.src = imgSrc;
   img.alt = "Install Button";
 
+  // Reveal only when loaded
+  img.addEventListener("load", () => {
+    wrapper.classList.add("loaded");
+  });
+
   const overlay = document.createElement("div");
   overlay.className = "cooldown-overlay";
 
-  // Robux-style hover animation
+  // Hover animation
   wrapper.addEventListener("mouseenter", () => {
     overlay.style.transition = "width 0.4s ease-out";
     overlay.style.width = "100%";
@@ -56,41 +59,46 @@ function addButton(imgSrc, url) {
   wrapper.addEventListener("mouseleave", () => {
     overlay.style.transition = "width 0.4s ease-in";
     overlay.style.width = "0%";
+    wrapper.classList.remove("pressed");
   });
 
-  // Unified click handler with press effect and mobile overlay rollback
-  img.addEventListener("click", (e) => {
-    e.preventDefault(); // prevent instant navigation
+  // Mouse down for all buttons (left, middle, right)
+  wrapper.addEventListener("mousedown", (e) => {
+    // Add pressed class
+    wrapper.classList.add("pressed");
 
     const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
     const delay = isMobile ? 250 : 100;
 
-    wrapper.classList.add("pressed");
-
-    // Trigger overlay forward fill (if not already visible)
+    // Animate overlay forward fill
     overlay.style.transition = "width 0.4s ease-out";
     overlay.style.width = "100%";
 
-    // Start rollback after press animation
-    setTimeout(() => {
-      // Reverse overlay animation
-      overlay.style.transition = "width 0.4s ease-in";
-      overlay.style.width = "0%";
+    // For left-click only (button 0), prevent default and open manually
+    if (e.button === 0) {
+      setTimeout(() => {
+        overlay.style.transition = "width 0.4s ease-in";
+        overlay.style.width = "0%";
+      }, delay);
 
-      // Open link
-      window.open(url, "_blank");
-    }, delay);
+      setTimeout(() => {
+        wrapper.classList.remove("pressed");
+      }, delay + 150);
+    }
 
-    // Remove press scale after animation
-    setTimeout(() => {
-      wrapper.classList.remove("pressed");
-    }, delay + 150);
+    // For middle-click, just let browser handle the default behavior
+  });
+
+  // Always remove pressed class after mouseup
+  wrapper.addEventListener("mouseup", () => {
+    wrapper.classList.remove("pressed");
   });
 
   wrapper.appendChild(img);
   wrapper.appendChild(overlay);
   buttonContainer.appendChild(wrapper);
 }
+
 
 function handleClick(wrapper, url, event) {
   // Add click scale animation
@@ -137,4 +145,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Start interval
   setInterval(updateSubtitle, DISPLAY_DURATION + 2 * FADE_DURATION);
+});
+
+// New code: show page only after full load (images, etc)
+window.addEventListener('load', () => {
+  document.body.classList.add('visible');
 });
