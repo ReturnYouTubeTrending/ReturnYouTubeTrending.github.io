@@ -2,8 +2,6 @@
 :root {
   --golden: 1.618;
   --unit: 10px;
-  --font-title: 35px;
-  --font-subtitle: 16px;
   --radius: calc(var(--unit) * 0.5 * var(--golden));
   --gap: calc(var(--unit) * var(--golden));
   --padding: calc(var(--unit) * var(--golden));
@@ -102,7 +100,7 @@ body::before {
 }
 
 .card-right h1 {
-  font-size: var(--font-title);
+  font-size: 30px;
   font-weight: 700;
   margin: 0;
 }
@@ -114,13 +112,15 @@ body::before {
 }
 
 #subtitle {
-  font-size: var(--font-subtitle);
+  font-size: 15px;
   font-weight: 600;
   color: #888;
   transition: opacity 1s ease;
-  min-height: 1.5em;
+  min-height: 24px;
   opacity: 1;
   display: block;
+  margin-top: -8px;
+  margin-bottom: 10px;
 }
 
 #subtitle.fade-out {
@@ -133,6 +133,7 @@ body::before {
   flex-wrap: wrap;
   margin-top: 16px;
   min-height: 30px;
+  margin-bottom: 5px;
 }
 
 .button-image {
@@ -241,15 +242,17 @@ body::before {
   }
 
   .card-right h1 {
-    font-size: 25px;
+    font-size: 28px;
     text-align: left;
+    margin-bottom: 8px;
     
   }
 
   .card-right p,
   #subtitle {
-    font-size: 14px;
+    font-size: 15px;
     text-align: left;
+    margin-bottom: 20px;
   }
 
   #button-container {
