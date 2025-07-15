@@ -1,14 +1,9 @@
 /* Source By ChatGPT */
-/* Source By ChatGPT */
 :root {
   --golden: 1.618;
   --unit: 10px;
-
-  /* new exact font sizes */
   --font-title: 35px;
   --font-subtitle: 16px;
-
-  /* existing vars (keep these if used elsewhere) */
   --radius: calc(var(--unit) * 0.5 * var(--golden));
   --gap: calc(var(--unit) * var(--golden));
   --padding: calc(var(--unit) * var(--golden));
