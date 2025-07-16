@@ -113,15 +113,15 @@ body::before {
 }
 
 #subtitle {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   color: #888;
   transition: opacity 1s ease;
   min-height: 24px;
   opacity: 1;
   display: block;
-  margin-top: -8px;
-  margin-bottom: 10px;
+  margin-top: -6px;
+  margin-bottom: 8px;
 }
 
 #subtitle.fade-out {
