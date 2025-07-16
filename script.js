@@ -22,7 +22,7 @@ function detectBrowser() {
     addButton(firefoxImg, firefoxURL);
     addButton(unknownImg, unknownURL);
   } else if (isSafari) {
-    addButton(safariImg, safariURL);
+    // addButton(safariImg, safariURL);
     addButton(unknownImg, unknownURL);
   } else if (isChromium) {
     addButton(chromeImg, chromeURL);
