@@ -243,10 +243,10 @@ body::before {
   }
 
   .card-right h1 {
-    font-size: 28px;
+    font-size: 25px;
     text-align: left;
-    margin-top: -10px;
-    margin-bottom: 5px;
+    margin-top: -5px;
+    margin-bottom: 4px;
     
   }
 
