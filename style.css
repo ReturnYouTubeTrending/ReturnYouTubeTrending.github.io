@@ -103,7 +103,7 @@ body::before {
   font-size: 31px;
   font-weight: 700;
   margin: 0;
-  margin-top: -4px;
+  margin-top: -2px;
 }
 
 .card-right p {
@@ -132,7 +132,7 @@ body::before {
   display: flex;
   gap: var(--gap);
   flex-wrap: wrap;
-  margin-top: 16px;
+  margin-top: 10px;
   min-height: 30px;
   margin-bottom: 5px;
 }
