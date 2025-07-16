@@ -114,13 +114,13 @@ body::before {
 
 #subtitle {
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
   color: #888;
   transition: opacity 1s ease;
   min-height: 24px;
   opacity: 1;
   display: block;
-  margin-top: -6px;
+  margin-top: -4px;
   margin-bottom: 8px;
 }
 
