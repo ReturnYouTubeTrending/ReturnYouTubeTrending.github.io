@@ -100,9 +100,10 @@ body::before {
 }
 
 .card-right h1 {
-  font-size: 30px;
+  font-size: 31px;
   font-weight: 700;
   margin: 0;
+  margin-top: -4px;
 }
 
 .card-right p {
