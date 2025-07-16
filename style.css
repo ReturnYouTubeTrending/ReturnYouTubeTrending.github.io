@@ -114,13 +114,13 @@ body::before {
 
 #subtitle {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   color: #888;
   transition: opacity 1s ease;
   min-height: 24px;
   opacity: 1;
   display: block;
-  margin-top: -4px;
+  margin-top: -6px;
   margin-bottom: 8px;
 }
 
@@ -246,7 +246,7 @@ body::before {
     font-size: 25px;
     text-align: left;
     margin-top: -5px;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
     
   }
 
