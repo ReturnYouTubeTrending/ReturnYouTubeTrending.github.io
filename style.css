@@ -138,7 +138,7 @@ body::before {
 
 .button-image {
   width: 140px;
-  height: 42px;
+  height: 43px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -244,6 +244,7 @@ body::before {
   .card-right h1 {
     font-size: 28px;
     text-align: left;
+    margin-top: -10px;
     margin-bottom: 8px;
     
   }
@@ -263,7 +264,7 @@ body::before {
 
   .button-image {
     width: 100px;
-    height: 33px;
+    height: 31px;
   }
 
   .rotated-text {
