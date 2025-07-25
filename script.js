@@ -1,15 +1,15 @@
 // Source by ChatGPT
 const buttonContainer = document.getElementById("button-container");
 
-const chromeImg = "chrome.png";
-const firefoxImg = "firefox.png";
-const safariImg = "safari.png";
-const unknownImg = "github.png";
+const Chrome = "chrome.png";
+const Firefox = "firefox.png";
+const Safari = "safari.png";
+const GitHub = "github.png";
 
-const chromeURL = "https://chromewebstore.google.com/detail/return-youtube-trending/apcbkpnopnnjaegbhnmcimmnlmmbolai";
-const firefoxURL = "https://addons.mozilla.org/firefox/addon/return-youtube-trending";
-const safariURL = "https://github.com/dr-sauce/returnyoutubetrending";
-const unknownURL = "https://github.com/dr-sauce/returnyoutubetrending";
+const Chrome_URL = "https://chromewebstore.google.com/detail/return-youtube-trending/apcbkpnopnnjaegbhnmcimmnlmmbolai";
+const Firefox_URL = "https://addons.mozilla.org/firefox/addon/return-youtube-trending";
+const Safari_URL = "https://github.com/dr-sauce/returnyoutubetrending";
+const GitHub_URL = "https://github.com/dr-sauce/returnyoutubetrending";
 
 function detectBrowser() {
   const ua = navigator.userAgent;
@@ -19,16 +19,16 @@ function detectBrowser() {
   const isChromium = ua.includes("Chrome") || ua.includes("Edg") || ua.includes("Chromium");
 
   if (isFirefox) {
-    addButton(firefoxImg, firefoxURL);
-    addButton(unknownImg, unknownURL);
+    addButton(Firefox, Firefox_URL);
+    addButton(GitHub, GitHub_URL);
   } else if (isSafari) {
-    // addButton(safariImg, safariURL);
-    addButton(unknownImg, unknownURL);
+ // addButton(Safari, Safari_URL);
+    addButton(GitHub, GitHub_URL);
   } else if (isChromium) {
-    addButton(chromeImg, chromeURL);
-    addButton(unknownImg, unknownURL);
+    addButton(Chrome, Chrome_URL);
+    addButton(GitHub, GitHub_URL);
   } else {
-    addButton(unknownImg, unknownURL);
+    addButton(GitHub, GitHub_URL);
   }
 }
 

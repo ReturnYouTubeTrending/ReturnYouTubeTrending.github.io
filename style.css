@@ -223,6 +223,8 @@ body::before {
     gap: 20px;
     max-width: 100%;
     margin: 0 auto;
+    position: relative;
+    top: -20px;
   }
 
   .card-left {
@@ -264,8 +266,8 @@ body::before {
   }
 
   .button-image {
-    width: 100px;
-    height: 31px;
+    width: 120px;
+    height: 36px;
   }
 
   .rotated-text {
@@ -275,6 +277,7 @@ body::before {
     transform: rotate(90deg) translateY(-100%);
     transform-origin: top left;
     padding: 6px;
+    margin-bottom: -5px
   }
 
   .rotated-text {
@@ -296,16 +299,30 @@ body::before {
 
 @media (prefers-color-scheme: dark) {
   .card {
-    background-color: #282828;
+    background-color: #000000;
     color: #fff;
     box-shadow: 0 8px 24px rgba(255, 255, 255, 0.15);
   }
 
-  .card-right p {
-    color: #ccc;
+  #subtitle {
+    color: #909095;
   }
 
-  .logo {
-    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.15);
+  .logo-image {
+  background-color: #1c1c1e;
+  }
+
+  .button-wrapper {
+  border-radius: 8px;
+  outline: 1px solid #000000;
+  }
+
+  .rotated-text {
+  color: #7e7979;
+  }
+  
+  body::before {
+  background: url('background \(dark\).jpg') no-repeat center center;
+  background-size: cover;
   }
 }
