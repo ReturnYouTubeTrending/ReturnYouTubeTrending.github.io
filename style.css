@@ -224,7 +224,7 @@ body::before {
     max-width: 100%;
     margin: 0 auto;
     position: relative;
-    top: -60px;
+    top: -40px;
   }
 
   .card-left {
@@ -245,18 +245,16 @@ body::before {
   }
 
   .card-right h1 {
-    font-size: 25px;
+    font-size: 27px;
     text-align: left;
     margin-top: -5px;
-    margin-bottom: 2px;
-    
+    margin-bottom: 5px;
   }
 
   .card-right p,
   #subtitle {
     font-size: 15px;
     text-align: left;
-    margin-top: 2px;
     margin-bottom: 20px;
   }
 
