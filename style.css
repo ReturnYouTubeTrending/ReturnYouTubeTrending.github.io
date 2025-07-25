@@ -211,7 +211,7 @@ body::before {
   body {
     align-items: center;
     justify-content: center;
-    padding: 16px;
+    padding: 10px;
   }
 
   .card {
@@ -224,7 +224,7 @@ body::before {
     max-width: 100%;
     margin: 0 auto;
     position: relative;
-    top: -20px;
+    top: -60px;
   }
 
   .card-left {
@@ -256,6 +256,7 @@ body::before {
   #subtitle {
     font-size: 15px;
     text-align: left;
+    margin-top: 2px;
     margin-bottom: 20px;
   }
 
@@ -266,18 +267,8 @@ body::before {
   }
 
   .button-image {
-    width: 120px;
-    height: 36px;
-  }
-
-  .rotated-text {
-    font-size: 10px;
-    top: 10px;
-    left: 0;
-    transform: rotate(90deg) translateY(-100%);
-    transform-origin: top left;
-    padding: 6px;
-    margin-bottom: -5px
+    width: 130px;
+    height: 39px;
   }
 
   .rotated-text {
