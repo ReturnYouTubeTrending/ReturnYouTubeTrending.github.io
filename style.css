@@ -247,7 +247,6 @@ body::before {
   .card-right h1 {
     font-size: 25px;
     text-align: left;
-    margin-top: -5px;
     margin-bottom: 5px;
   }
 
